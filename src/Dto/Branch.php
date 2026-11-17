@@ -16,6 +16,7 @@ final readonly class Branch
     public int $categoryId,
     public string $stageId,
     public ?int $assignedById,
+    public string $phone = '',
   ) {
   }
 }

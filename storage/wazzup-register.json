@@ -1,0 +1,6 @@
+{
+  "webhooksUri": "https://bitrix-mamyr-city.inv-x.kz/public/webhook.php?key=bC7kM9pQ2xR5vN8wL4jT6hF",
+  "subscriptions": {
+    "messagesAndStatuses": true
+  }
+}

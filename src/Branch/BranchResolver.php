@@ -42,6 +42,7 @@ final class BranchResolver
             assignedById: isset($branch['assigned_by_id']) && $branch['assigned_by_id'] !== null && $branch['assigned_by_id'] !== ''
               ? (int) $branch['assigned_by_id']
               : null,
+            phone: (string) ($branch['phone'] ?? ''),
           );
         }
       }

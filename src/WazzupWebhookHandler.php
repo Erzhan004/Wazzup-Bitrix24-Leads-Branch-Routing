@@ -13,6 +13,7 @@ use App\Exception\BitrixApiException;
 use App\Flow\FlowOrchestrator;
 use App\Http\JsonResponse;
 use App\Http\WebhookSecurity;
+use App\Wazzup\WazzupClient;
 use App\Wazzup\WazzupWebhookParser;
 use Psr\Log\LoggerInterface;
 use Throwable;
@@ -135,6 +136,8 @@ final class WazzupWebhookHandler
         new ContactService($config, $bitrix, $phoneNormalizer, $logger),
         new DealService($config, $bitrix, $logger),
         new BranchResolver($config),
+        new WazzupClient($config, $logger),
+        $config,
         $logger
       ),
       $logger,

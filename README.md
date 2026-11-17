@@ -5,7 +5,8 @@
 ```
 Лид STATUS = Не обработан
   → любое сообщение не из списка городов → IGNORE (ждём дальше)
-  → Астана / Алматы / Павлодар → город в лид + сделка в воронке + Обработан
+  → город из списка → город в лид + сделка в воронке + Обработан
+  → WhatsApp-ответ с телефоном филиала (Wazzup API)
 
 Лид STATUS = Обработан
   → сообщения игнорируются
@@ -26,7 +27,8 @@ Set:
 
 - `lead.city_field`
 - `lead.statuses.unprocessed` / `processed`
-- `branches.*.category_id` / `stage_id` / `cities`
+- `branches.*.category_id` / `stage_id` / `cities` / `phone`
+- `wazzup.branch_reply_template` (optional)
 
 ## Example logs
 
@@ -38,4 +40,5 @@ BRANCH_RESOLVED_ASTANA
 CITY_SAVED_TO_LEAD
 DEAL_CREATED
 LEAD_MARKED_PROCESSED
+WAZZUP_BRANCH_PHONE_SENT
 ```

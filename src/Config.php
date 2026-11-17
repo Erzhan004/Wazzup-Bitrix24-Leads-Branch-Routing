@@ -72,6 +72,7 @@ final class Config
   private function validate(): void
   {
     $this->require('bitrix.webhook');
+    $this->require('wazzup.api_key');
     $this->require('wazzup.webhook_secret');
     $this->require('lead.city_field');
     $this->require('lead.statuses.unprocessed');
@@ -82,7 +83,7 @@ final class Config
         throw new RuntimeException('Invalid branch config: ' . $key);
       }
 
-      foreach (['name', 'cities', 'category_id', 'stage_id'] as $field) {
+      foreach (['name', 'cities', 'category_id', 'stage_id', 'phone'] as $field) {
         if (!array_key_exists($field, $branch) || $branch[$field] === '' || $branch[$field] === null) {
           throw new RuntimeException(sprintf('Branch "%s" is missing "%s".', $key, $field));
         }
