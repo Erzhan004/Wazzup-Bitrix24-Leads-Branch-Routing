@@ -160,7 +160,7 @@ final class FlowOrchestrator
 
     $template = (string) $this->config->get(
       'wazzup.branch_reply_template',
-      "Спасибо! Ваш филиал — {branch}.\n\nТелефон для связи:\n{phone}\n\nМы уже передали вашу заявку менеджеру."
+      "Спасибо! Ваш филиал — {branch}.\n\nТелефон для связи:\n{phone}\n\nМы уже передали вашу заявку менеджеру.\n***************************\nРақмет! Сіздің филиалыңыз — {branch}.\n\nБайланыс телефоны:\n{phone}\n\nӨтініміңізді менеджерге жібердік."
     );
 
     $text = strtr($template, [

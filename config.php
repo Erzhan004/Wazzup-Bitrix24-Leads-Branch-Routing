@@ -19,7 +19,7 @@ return [
     'public_webhook_url' => 'https://bitrix-mamyr-city.inv-x.kz/public/webhook.php',
     'allowed_channel_ids' => null,
     // Placeholders: {branch}, {phone}, {city}
-    'branch_reply_template' => "Спасибо! Ваш филиал — {branch}.\n\nТелефон для связи:\n{phone}\n\nМы уже передали вашу заявку менеджеру.",
+    'branch_reply_template' => "Спасибо! Ваш филиал — {branch}.\n\nТелефон для связи:\n{phone}\n\nМы уже передали вашу заявку менеджеру.\n***************************\nРақмет! Сіздің филиалыңыз — {branch}.\n\nБайланыс телефоны:\n{phone}\n\nӨтініміңізді менеджерге жібердік.",
     'http' => [
       'connect_timeout' => 5.0,
       'timeout' => 20.0,
